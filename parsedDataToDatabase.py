@@ -1,8 +1,5 @@
 import db
 import json
-from pathlib import Path
-
-p = Path(__file__).parents[1]
 
 coursesDatabase = db.CoursesInfoDatabase("courses.db")
 # coursesDatabase = db.CoursesInfoDatabase('test.db')
