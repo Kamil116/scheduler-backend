@@ -12,15 +12,12 @@ from bot import bot
 from db import StudentsInfoDatabase
 from apsched import send_notification
 from parsedDataToDatabase import coursesDatabase
-from utils.helpers import make_row_keyboard, get_marked_courses, get_marked_groups, start_menu, settings_menu, \
+from helpers import make_row_keyboard, get_marked_courses, get_marked_groups, start_menu, settings_menu, \
     available_courses, available_groups
-from pathlib import Path
 
 router = Router()
 
-p = Path(__file__).parents[1]
-
-db = StudentsInfoDatabase(fr"{str(p)}\data\users.db")
+db = StudentsInfoDatabase("users.db")
 
 
 class MenuStates(StatesGroup):

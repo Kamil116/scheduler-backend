@@ -1,13 +1,13 @@
-from backend import db
+import db
 import json
 from pathlib import Path
 
 p = Path(__file__).parents[1]
 
-coursesDatabase = db.CoursesInfoDatabase(f"{str(p)}/data/courses.db")
+coursesDatabase = db.CoursesInfoDatabase("courses.db")
 # coursesDatabase = db.CoursesInfoDatabase('test.db')
 
-json_file = f"{str(p)}/data/output.json"
+json_file = 'output.json'
 
 with open(json_file) as json_data:
     data = json.load(json_data)

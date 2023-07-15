@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from backend.CourseModel import UpdateCourse, NewCourse
-from backend.parsedDataToDatabase import coursesDatabase
+from CourseModel import UpdateCourse, NewCourse
+from parsedDataToDatabase import coursesDatabase
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
